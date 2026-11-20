@@ -64,3 +64,27 @@ docs/           documentación del flujo de entrega
 requirements.txt       dependencias de la aplicación, con versión fija
 requirements-dev.txt   dependencias para desarrollar y probar
 ```
+
+## Parte 3 
+
+V3.12-slim
+IMAGE                                                                          ID             DISK USAGE   CONTENT SIZE   EXTRA
+ghcr.io/josgam0294-plabs/api-tareas:7acde46b6ddb32d101680f28c3412ee5324e3145   3806e162aea4        188MB         45.5MB        
+
+
+
+### Docker Ignore
+.git = Evitar incluir configuraciones de git en el paquete
+.github = Evitar incluir configuraciones de github en el paquete
+.venv = Para no incluir las configuraciones del ambiente virtual de python
+venv = En caso de haber nombrado venv al ambiente virtual mismo principio del .venv
+**/__pycache__ = Para no incluir archivos temporales de la ejecución del ambiente de python
+**/*.pyc = Para no incluir archivos temporales de la ejecución del ambiente de python
+.pytest_cache = Para no incluir archivos temporales de la ejecución del ambiente de pruebas de python
+.ruff_cache = Para evitar que build de docker requiera reconstruir la imagen por conflictos con el cache de la imagen
+.coverage = Este archivo es autogenerado por los paquetes de testing de Python
+htmlcov = Este archivo es autogenerado por los paquetes de testing de Python
+reportes = No es necesario para construir la imagen en Docker
+tests = No es necesario para construir la imagen en Docker
+docs = No es necesario para construir la imagen en Docker
+.env = En caso de haber nombrado venv al ambiente virtual mismo principio del .venv
